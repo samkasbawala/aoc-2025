@@ -18,4 +18,3 @@ func RegisterSolver(day int, solver Solver) {
 func GetSolver(day int) Solver {
 	return DaySolverRegistry[day]
 }
-
