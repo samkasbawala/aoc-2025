@@ -8,6 +8,8 @@ I have been using Golang for the better part of this past year and have really g
 
 ### Install Go
 
+Instructions can be found [here](https://go.dev/doc/install).
+
 ### Install Dependencies
 
 ```
@@ -16,6 +18,20 @@ go mod tidy
 
 ### Run the CLI App
 
+The below command will print out help docs:
+
 ```
 go run main.go --help
+```
+
+Below is an example of running a particular day's solution:
+
+```
+go run main.go day01 --input <path-to-your-input-fule> --part 1
+```
+
+### Run Tests
+
+```
+go test ./...
 ```
