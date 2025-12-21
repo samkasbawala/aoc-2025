@@ -12,7 +12,7 @@ func init() {
 	RegisterSolver(2, &Day2Solver{})
 }
 
-func (d Day2Solver) Part1(input []byte) (string, error) {
+func (d *Day2Solver) Part1(input []byte) (string, error) {
 	lines := strings.Split(strings.TrimSpace(string(input)), "\n")
 	str := lines[0]
 	ranges := strings.Split(strings.TrimSpace(str), ",")
@@ -50,7 +50,7 @@ func (d Day2Solver) Part1(input []byte) (string, error) {
 	return fmt.Sprintf("%d", sumInvalid), nil
 }
 
-func (d Day2Solver) Part2(input []byte) (string, error) {
+func (d *Day2Solver) Part2(input []byte) (string, error) {
 	lines := strings.Split(strings.TrimSpace(string(input)), "\n")
 	str := lines[0]
 	ranges := strings.Split(strings.TrimSpace(str), ",")
