@@ -1,0 +1,83 @@
+package solvers
+
+import (
+	"testing"
+)
+
+const day7TestInput = `.......S.......
+...............
+.......^.......
+...............
+......^.^......
+...............
+.....^.^.^.....
+...............
+....^.^...^....
+...............
+...^.^...^.^...
+...............
+..^...^.....^..
+...............
+.^.^.^.^.^...^.
+...............
+`
+
+func TestDay7Part1(t *testing.T) {
+	solver := Day7Solver{}
+
+	tests := []struct {
+		name     string
+		input    string
+		expected string
+	}{
+		{
+			name:     "sample",
+			input:    day7TestInput,
+			expected: "21",
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got, err := solver.Part1([]byte(tt.input))
+
+			if err != nil {
+				t.Fatalf("error: err %s", err)
+			}
+
+			if got != tt.expected {
+				t.Errorf("got %s, want %s", got, tt.expected)
+			}
+		})
+	}
+}
+
+func TestDay7Part2(t *testing.T) {
+	solver := Day7Solver{}
+
+	tests := []struct {
+		name     string
+		input    string
+		expected string
+	}{
+		{
+			name:     "sample",
+			input:    day7TestInput,
+			expected: "40",
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got, err := solver.Part2([]byte(tt.input))
+
+			if err != nil {
+				t.Fatalf("error: err %s", err)
+			}
+
+			if got != tt.expected {
+				t.Errorf("got %s, want %s", got, tt.expected)
+			}
+		})
+	}
+}
